@@ -1,0 +1,149 @@
+/* карточка */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+.card-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 70vw;
+}
+.card {
+  padding: 0px 0;
+  color: #fff;
+  background-color: rgb(0, 163, 158);
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.3s ease-in;
+  /*padding: 10px;
+  */
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+}
+.card:hover {
+  background-color: rgb(0, 109, 105);
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card .img-wrap {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+/* модалка */
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  border-radius: 10px;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.modal img {
+  min-width: 500px;
+  height: 200px;
+  object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+  .card-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .card-wrap {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 95vw;
+  }
+}
+
+/* анимации фотки в модалке */
+
+@keyframes fotka {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.modal img {
+  animation: fotka;
+}
+
+.hidden-screen {
+  display: none;
+}
+
+#map {
+  width: 100%;
+  height: calc(100vh - 150px);
+}
+
+#navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(
+    163deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(245, 247, 251, 0) 80%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid white;
+  gap: 30px;
+}
+#navigation button {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+}
+#navigation button img {
+  width: 40px;
+  height: auto;
+}
