@@ -8,10 +8,11 @@
     <title>Морское-место</title>
   </head>
   <body>
-    <div id="cards" class="card-wrap">
+    <div id="cards" class="card-wrap screen">
       <div class="lds-ring"></div>
     </div>
-    <div id="map"></div>
+    <div id="map" class="screen"></div>
+    <div id="fav" class="screen"></div>
     <nav id="navigation">
       <button class="cards-btn">
         <img src="./img/house.svg" alt="house" />
@@ -21,6 +22,10 @@
         <img src="./img/map.svg" alt="map" />
         Карта
       </button>
+      <button class="fav-btn">
+        <img src="./img/map.svg" alt="map" />
+        Избранное
+      </button>
     </nav>
 
     <script
@@ -28,6 +33,6 @@
       type="text/javascript"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
-    <script src="./script.js"></script>
+    <script src="./new-script.js"></script>
   </body>
 </html>
